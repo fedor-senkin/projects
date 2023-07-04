@@ -1,0 +1,3409 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+        html {
+            font-size: 16px;
+            font-family: "Open Sans", Helvetica, sans-serif;
+        }
+        body {
+            padding: 50px;
+            max-width: 700px;
+            width: 700px;
+        }
+        .page {
+            overflow: hidden;
+            page-break-after: always;
+            margin-bottom: 250px;
+        }
+        h1 {
+            margin-top: 0.25rem;
+            font-size: 1.5rem;
+        }
+        .row {
+            width: 100%;
+        }
+        .col-3 {
+            width: 25%;
+            float:left;
+        }
+        .col-4 {
+            width: 33.33%;
+            float:left;
+        }
+        .col-12 {
+            width: 100%;
+            float: left;
+        }
+        .param {
+            font-size: 0.875rem;
+            font-weight: normal;
+            word-break: break-word;
+        }
+
+        .color-blocker, .color-critical, .color-major, .color-high {
+            color: #D0021B;
+        }
+
+        .conditions-header {
+            font-size: 0.875rem;
+            font-weight: bold;
+            padding-bottom: 0.25rem;
+        }
+
+        .conditions-data {
+            font-weight: normal;
+            font-size: 0.875rem;
+        }
+
+        .clearfix::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        .data-row {
+            margin-top: 1rem;
+        }
+
+        .table-steps table {
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-steps table td, .table-steps table th {
+            border: 1px solid;
+            padding: 5px 8px;
+        }
+
+        .table-steps img {
+            max-height: 500px;
+        }
+
+        .table-steps {
+            width: 100%;
+        }
+        .table-steps td {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #dedede;
+        }
+        .table-steps th {
+            font-size: 0.875rem; text-align: left;
+        }
+        .table-steps p {
+            margin-bottom: 0;
+        }
+        .steps ol, .steps ul {
+            margin-bottom: 0;
+            padding-left: 1.125rem;
+        }
+        .steps li {
+            font-size: 0.875rem;
+        }
+
+        .step-position span {
+            padding: .25rem 0.75rem;
+            display: block;
+            margin-right: .75rem;
+            border-radius: .25rem;
+            color: #636363;
+            background: #f3f3f3;
+        }
+
+        .step-action p {
+            display: none;
+        }
+
+        .step-content p.data {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .description {
+            font-size: 0.875rem !important;
+            margin-top: 0 !important;
+        }
+        .description p{
+            font-size: 0.875rem !important;
+            margin-top: 0 !important;
+        }
+
+        .table-steps img,
+        .description img,
+        .markdown img,
+        .steps img {
+            max-width: 100%;
+        }
+
+        .attachments {vertical-align: top;}
+        .attachments .attachment{width:96px;display:inline-block; margin-right: 8px; vertical-align: top}
+        .attachments .attachment-image{width:96px;height:96px;border-radius:6px;background-size:cover !important;}
+        .attachments .attachment-file{width:96px;height:96px;background:#e9e9e9;border-radius:6px;}
+        .attachments .attachment-file .attachment-extension{display:inline-block; text-decoration:none !important;font-weight:500;color:#000; padding-left: 8px; padding-top: 8px; font-size: 0.75rem;}
+        .attachments .attachment .attachment-filename{width:96px;display:block; text-overflow:ellipsis;white-space:nowrap;margin-top:0.5rem;overflow:hidden;text-decoration:none;color:#656565;font-size:0.625rem;}
+        .attachments .attachment a {text-decoration:none !important;border-bottom: 0;}
+    </style>
+    <link rel="stylesheet" href="https://app.qase.io/assets/main/css/fontawesome.min.css?1688397956">
+</head>
+<body>
+                                <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-1
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Добавление трех личных событий разного цвета.</h1>
+        <div class="description"><p>Возможность создания личных событий разного цвета.</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-double-up color-critical"></i> Critical</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Acceptance</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Пользователь зарегистрирован и авторизован в системе.<br />
+Открыта страница <a href="https://teachers.skyeng.ru/schedule" target="_blank">Расписание (skyeng.ru)</a></p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Кликнуть по пустому слоту в расписании.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открывается форма добавления личного события.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Кликнуть на вкладку "Личное событие".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Вкладка открывается.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Заполнить поле "Название события".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ученик из Школы 1</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В поле отображается введенное название.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Поля "День и время" заполнить корректно.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Отображаются введенные дата и время.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Указать цвет события</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>желтый</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Желтый цвет события отмечен.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">6</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Сохранить"</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В расписании отображается событие "Ученик из Школы 1" желтого цвета.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">7</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Кликнуть по пустому слоту в расписании.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открывается форма добавления личного события.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">8</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Кликнуть на вкладку "Личное событие".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Вкладка открывается.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">9</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Заполнить поле "Название события".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ученик из Школы 2</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В поле отображается введенное название.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">10</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Поля "День и время" заполнить корректно.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Отображаются введенные дата и время.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">11</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Указать цвет события.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>зеленый</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Зеленый цвет события отмечен.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">12</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Сохранить".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В расписании отображается событие "Ученик из Школы 2" зеленого цвета.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">13</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Кликнуть по пустому слоту в расписании.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открывается форма добавления личного события.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">14</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Кликнуть на вкладку "Личное событие".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Вкладка открывается.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">15</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Заполнить поле "Название события".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ученик из Школы 3</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В поле отображается введенное название.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">16</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Поля "День и время" заполнить корректно.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Отображаются введенные дата и время.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">17</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Указать цвет события.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>фиолетовый</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Фиолетовый цвет события отмечен.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">18</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Сохранить".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В расписании отображается событие "Ученик из Школы 3" фиолетового цвета.</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-2
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Добавление нового личного события в прошлом.</h1>
+        <div class="description"><p>Добавление нового личного события на прошедшую дату.</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-double-up color-critical"></i> Critical</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Acceptance</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Пользователь зарегистрирован и авторизован в системе.<br />
+Открыта страница <a href="https://teachers.skyeng.ru/schedule" target="_blank">Расписание (skyeng.ru)</a></p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на кнопку "+"</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открывается форма добавления нового личного события.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Кликнуть на вкладку "Личное событие".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Вкладка открывается.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>В поле "Название события" ввести:</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Разбор ДЗ</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В поле отображается введенное значение.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Заполнить поля "День и время":</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>день = дата из прошлого месяца<br />
+время = произвольное корректное значение</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В полях отображаются введенные значения.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Сохранить".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Событие добавлено в расписание за прошлый месяц.</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-3
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Добавление личных событий разной длительности.</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-double-up color-critical"></i> Critical</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Acceptance</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Пользователь зарегистрирован и авторизован в системе.<br />
+Открыта страница <a href="https://teachers.skyeng.ru/schedule" target="_blank">Расписание (skyeng.ru)</a></p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "+".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открывается форма добавления личного события.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Кликнуть на вкладку "Личное событие"</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Вкладка открывается.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Заполнить поле "Название события".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Минимальный урок</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Введенное значение отображается в поле.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Заполнить поле "День и время":</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Дата = произвольное валидное значение.<br />
+Время начала = 10:00<br />
+Время окончания = 10:25</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В полях отображаются введенные значения.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Сохранить".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В расписание добавляется созданное личное событие на указанную дату с 10:00 до 10:25.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">6</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "+".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открывается форма добавления личного события.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">7</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Кликнуть на вкладку "Личное событие"</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Вкладка открывается.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">8</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Заполнить поле "Название события".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Подготовка к олимпиаде</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Введенное значение отображается в поле.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">9</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Заполнить поле "День и время":</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Дата = произвольное валидное значение.<br />
+Время начала = 09:00<br />
+Время окончания = 11:30</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В полях отображаются введенные значения.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">10</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Сохранить".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В расписание добавляется созданное личное событие на указанную дату с 09:00 до 11:30.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">11</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "+".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открывается форма добавления личного события.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">12</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Кликнуть на вкладку "Личное событие"</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Вкладка открывается.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">13</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Заполнить поле "Название события".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Максимальный урок</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Введенное значение отображается в поле.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">14</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Заполнить поле "День и время":</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Дата = произвольное валидное значение.<br />
+Время начала = 10:00<br />
+Время окончания = 19:40</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В полях отображаются введенные значения.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">15</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Сохранить".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В расписание добавляется созданное личное событие на указанную дату с 10:00 до 19:40.</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                                        <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-4
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Создание нового события.</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-ban color-blocker"></i> Blocker</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Smoke</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Пользователь зарегистрирован и авторизован в системе.<br />
+Открыта страница <a href="https://teachers.skyeng.ru/schedule" target="_blank">Расписание (skyeng.ru)</a></p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "+"</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открывается форма "Создать событие"</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти на вкладку "Личное событие"</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открывается форма создания личного события.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Заполнить поля формы</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>название = Библиотечный день<br />
+дата = 15 марта 2023<br />
+время начала = 12:00<br />
+время окончания = 15:00<br />
+описание = подготовка к диктанту<br />
+цвет = фиолетовый</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поля содержать введенные значения</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Сохранить"</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Событие отображается в расписании.</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-5
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Редактирование ранее созданного события.</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-ban color-blocker"></i> Blocker</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Smoke</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Пользователь зарегистрирован и авторизован в системе.<br />
+Открыта страница <a href="https://teachers.skyeng.ru/schedule" target="_blank">Расписание (skyeng.ru)</a><br />
+Создано событие "Библиотечный день".</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Кликнуть по событию "Библиотечный день" в расписании.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открывается окно события.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Редактировать"</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открывается форма редактирования события.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Заполнить поля формы</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>название = Нерабочий день<br />
+дата = 15 марта 2023<br />
+время начала = 08:00<br />
+время окончания = 23:00<br />
+описание = не записывать учеников<br />
+цвет = желтый</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поля содержат введенные значения.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Сохранить"</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Событие "Нерабочий день" отображается в расписании вместо события "Библиотечный день".</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-6
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Удаление ранее созданного события.</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-ban color-blocker"></i> Blocker</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Smoke</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Пользователь зарегистрирован и авторизован в системе.<br />
+Открыта страница <a href="https://teachers.skyeng.ru/schedule" target="_blank">Расписание (skyeng.ru)</a><br />
+Создано событие "Нерабочий день".</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Кликнуть по событию "Нерабочий день" в расписании.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открывается окно события.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Удалить".</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Событие "Нерабочий день" не отображается в расписании.</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                                        <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-21
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Создание события в настоящем</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-ban color-blocker"></i> Blocker</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">API</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Удалить созданное событие.</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Получить список событий</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-05-01T00:00:00+03:00",<br />
+"till": "2023-05-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Отображается список событий</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Создать новое личное событие в настоящем</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/createPersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/createPersonal</a><br />
+Тело запроса:<br />
+ "startAt": "2023-05-10T10:00:00+03:00",<br />
+    "endAt": "2023-05-10T11:30:00+03:00",<br />
+    "title": "Сенькин библиотека",<br />
+    "description": "library",<br />
+    "color": "#43B658",<br />
+    "backgroundColor": "#EBFDF2"</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Событие создано</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Проверить добавление нового события в список событий</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-05-01T00:00:00+03:00",<br />
+"till": "2023-05-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Новое событие отображается в списке событий</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-22
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Изменение имени события в настоящем</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">API</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Удалить созданное событие.</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Получить список событий</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-05-01T00:00:00+03:00",<br />
+"till": "2023-05-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Отображается список событий</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Создать новое личное событие в настоящем</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/createPersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/createPersonal</a><br />
+Тело запроса:<br />
+"startAt": "2023-05-10T10:30:00+03:00",<br />
+    "endAt": "2023-05-10T12:00:00+03:00",<br />
+    "title": "Сенькин библиотека",<br />
+    "description": "library",<br />
+    "color": "#43B658",<br />
+    "backgroundColor": "#EBFDF2"</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Событие создано</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Проверить добавление нового события в список</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-05-01T00:00:00+03:00",<br />
+"till": "2023-05-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Событие отображается в списке</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Изменить имя события в настоящем</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/updatePersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/updatePersonal</a><br />
+Тело запроса:<br />
+"startAt": "2023-05-10T10:30:00+03:00",<br />
+    "endAt": "2023-05-10T12:00:00+03:00",<br />
+    "title": "библиотека, сегодня. Сенькин",<br />
+    "description": "library",<br />
+    "color": "#43B658",<br />
+    "backgroundColor": "#EBFDF2",<br />
+    "id": id события</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Имя события изменено</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Проверить изменение имени события</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-05-01T00:00:00+03:00",<br />
+"till": "2023-05-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Событие с новым именем отображается в списке</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-23
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Удаление личного события в настоящем</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-ban color-blocker"></i> Blocker</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">API</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Получить список событий</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-05-01T00:00:00+03:00",<br />
+"till": "2023-05-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Отображается список событий</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Создать новое личное событие в настоящем</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/createPersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/createPersonal</a><br />
+Тело запроса:<br />
+"startAt": "2023-05-10T12:30:00+03:00",<br />
+    "endAt": "2023-05-10T13:00:00+03:00",<br />
+    "title": "Сенькин библиотека",<br />
+    "description": "library",<br />
+    "color": "#43B658",<br />
+    "backgroundColor": "#EBFDF2"</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Новое событие создано</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Проверить создание нового события</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-05-01T00:00:00+03:00",<br />
+"till": "2023-05-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Новое событие отображается в списке</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Удалить событие в настоящем</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/removePersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/removePersonal</a><br />
+Тело запроса:<br />
+"id": id события,<br />
+"startAt": "2023-05-10T12:30:00+03:00"</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Ответ:<br />
+message: string<br />
+code: string</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Проверить удаление события</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-05-01T00:00:00+03:00",<br />
+"till": "2023-05-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Удаленное событие не отображается в списке событий</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-24
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Создание события в прошлом</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-ban color-blocker"></i> Blocker</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">API</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Удалить событие.</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Получить список событий</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-03-01T00:00:00+03:00",<br />
+    "till": "2023-03-30T00:00:00+03:00",<br />
+    "onlyTypes": ["slot", "event"],<br />
+    "statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Отображается список событий</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Создать новое событие в прошлом</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/createPersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/createPersonal</a><br />
+Тело запроса:<br />
+"startAt": "2023-03-01T18:30:00+03:00",<br />
+    "endAt": "2023-03-01T19:30:00+03:00",<br />
+    "title": "Сенькин Library",<br />
+    "description": ",library-day",<br />
+    "color": "#FAC641",<br />
+    "backgroundColor": "#FFF7C7"</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Новое событие создано</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Проверить создание события</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-03-01T00:00:00+03:00",<br />
+    "till": "2023-03-30T00:00:00+03:00",<br />
+    "onlyTypes": ["slot", "event"],<br />
+    "statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Созданное событие отображается в списке</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-25
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Изменение даты события в прошлом</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-double-up color-critical"></i> Critical</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">API</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Удалить созданное событие.</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Получить список событий</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-03-01T00:00:00+03:00",<br />
+"till": "2023-03-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Отображается список событий</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Создать новое личное событие в прошлом</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/createPersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/createPersonal</a><br />
+Тело запроса:<br />
+"startAt": "2023-03-01T18:30:00+03:00",<br />
+    "endAt": "2023-03-01T19:30:00+03:00",<br />
+    "title": "Сенькин Library",<br />
+    "description": ",library-day",<br />
+    "color": "#FAC641",<br />
+    "backgroundColor": "#FFF7C7"</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Событие создано</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Проверить добавление нового события в список</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-03-01T00:00:00+03:00",<br />
+"till": "2023-03-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Событие отображается в списке</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Изменить дату события в прошлом</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/updatePersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/updatePersonal</a><br />
+Тело запроса:<br />
+"startAt": "2023-04-01T18:30:00+03:00",<br />
+    "endAt": "2023-04-01T19:30:00+03:00",<br />
+    "title": "Сенькин Library",<br />
+    "description": ",library-day",<br />
+    "color": "#FAC641",<br />
+    "backgroundColor": "#FFF7C7",<br />
+    "id": id события</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Дата события изменена</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Проверить изменение даты события</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-03-01T00:00:00+03:00",<br />
+"till": "2023-03-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Событие с новой датой отображается в списке</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-26
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Удаление события в прошлом</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-ban color-blocker"></i> Blocker</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">API</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Получить список событий</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-03-01T00:00:00+03:00",<br />
+"till": "2023-03-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Отображается список событий</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Создать новое личное событие в прошлом</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/createPersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/createPersonal</a><br />
+Тело запроса:<br />
+"startAt": "2023-03-01T18:30:00+03:00",<br />
+    "endAt": "2023-03-01T19:30:00+03:00",<br />
+    "title": "Сенькин Library",<br />
+    "description": ",library-day",<br />
+    "color": "#FAC641",<br />
+    "backgroundColor": "#FFF7C7"</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Новое событие создано</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Проверить создание нового события</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-03-01T00:00:00+03:00",<br />
+"till": "2023-03-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Новое событие отображается в списке</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Удалить событие в прошлом</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/removePersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/removePersonal</a><br />
+Тело запроса:<br />
+"id": id события,<br />
+ "startAt": "2023-03-01T18:30:00+03:00"</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Ответ:<br />
+message: string<br />
+code: string</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Проверить удаление события</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-03-01T00:00:00+03:00",<br />
+"till": "2023-03-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Удаленное событие не отображается в списке событий</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-27
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Создание события в будущем</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-ban color-blocker"></i> Blocker</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">API</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Удалить созданное событие.</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Получить список событий</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-07-01T00:00:00+03:00",<br />
+"till": "2023-07-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Отображается список событий</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Создать новое личное событие в будущем</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/createPersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/createPersonal</a><br />
+Тело запроса:<br />
+ "startAt": "2023-07-11T13:45:00+03:00",<br />
+    "endAt": "2023-07-11T15:15:00+03:00",<br />
+    "title": "Senkin@библиотека",<br />
+    "description": "$работа с литературой&",<br />
+    "color": "#81888D",<br />
+    "backgroundColor": "#F4F5F6"</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Событие создано</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Проверить добавление нового события в список событий</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-07-01T00:00:00+03:00",<br />
+"till": "2023-07-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Созданное событие отображается в списке событий</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-28
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Изменение описания события в будущем</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-double-up color-critical"></i> Critical</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">API</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Удалить созданное событие.</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Получить список событий</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-07-01T00:00:00+03:00",<br />
+"till": "2023-07-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Отображается список событий</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Создать новое личное событие в будущем</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/createPersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/createPersonal</a><br />
+Тело запроса:<br />
+"startAt": "2023-07-11T13:45:00+03:00",<br />
+    "endAt": "2023-07-11T15:15:00+03:00",<br />
+    "title": "Senkin@библиотека",<br />
+    "description": "$работа с литературой&",<br />
+    "color": "#81888D",<br />
+    "backgroundColor": "#F4F5F6"</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Событие создано</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Проверить добавление нового события в список</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-07-01T00:00:00+03:00",<br />
+"till": "2023-07-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Событие отображается в списке</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Изменить описание события в будущем</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/updatePersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/updatePersonal</a><br />
+Тело запроса:<br />
+"startAt": "2023-07-11T13:45:00+03:00",<br />
+    "endAt": "2023-07-11T15:15:00+03:00",<br />
+    "title": "Сенькин в библиотеке",<br />
+    "description": "проверка домашних заданий",<br />
+    "color": "#81888D",<br />
+    "backgroundColor": "#F4F5F6",<br />
+    "id": id события</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Описание события изменено</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Проверить изменение описания события</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-07-01T00:00:00+03:00",<br />
+"till": "2023-07-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Событие с новым описанием отображается в списке</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-29
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Удаление события в будущем</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-ban color-blocker"></i> Blocker</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">API</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Получить список событий</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-07-01T00:00:00+03:00",<br />
+"till": "2023-07-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Отображается список событий</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Создать новое личное событие в будущем</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/createPersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/createPersonal</a><br />
+Тело запроса:<br />
+"startAt": "2023-07-11T13:45:00+03:00",<br />
+    "endAt": "2023-07-11T15:15:00+03:00",<br />
+    "title": "Senkin@библиотека",<br />
+    "description": "$работа с литературой&",<br />
+    "color": "#81888D",<br />
+    "backgroundColor": "#F4F5F6"</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Новое событие создано</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Проверить создание нового события</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-07-01T00:00:00+03:00",<br />
+"till": "2023-07-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Новое событие отображается в списке</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Удалить событие в будущем</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/removePersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/removePersonal</a><br />
+Тело запроса:<br />
+"id": id события,<br />
+ "startAt": "2023-07-11T13:45:00+03:00"</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Ответ:<br />
+message: string<br />
+code: string</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Проверить удаление события</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-07-01T00:00:00+03:00",<br />
+"till": "2023-07-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Удаленное событие не отображается в списке событий</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-30
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Удаление несуществующего события</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-down color-low"></i> Low</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Negative</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">API</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Получить список событий</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-05-01T00:00:00+03:00",<br />
+"till": "2023-05-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Отображается список событий</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Удалить несуществующее событие</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/removePersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/removePersonal</a><br />
+Тело запроса:<br />
+"id": несуществующий id события,<br />
+ "startAt": "2023-05-11T13:45:00+03:00"</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код ошибки</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            KIK-31
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Создание двух событий в одно время и дату</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-ban color-blocker"></i> Blocker</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">API</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Удалить созданные события.</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Получить список событий</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-07-01T00:00:00+03:00",<br />
+"till": "2023-07-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Отображается список событий</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Создать новое событие 1</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/createPersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/createPersonal</a><br />
+Тело запроса:<br />
+ "startAt": "2023-07-11T13:45:00+03:00",<br />
+    "endAt": "2023-07-11T15:15:00+03:00",<br />
+    "title": "Событие 1 Senkin",<br />
+    "description": "$работа с литературой&",<br />
+    "color": "#81888D",<br />
+    "backgroundColor": "#F4F5F6"</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Событие создано</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Создать новое событие 2</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/createPersonal" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/createPersonal</a><br />
+Тело запроса:<br />
+ "startAt": "2023-07-11T13:45:00+03:00",<br />
+    "endAt": "2023-07-11T15:15:00+03:00",<br />
+    "title": "Событие 2 Senkin",<br />
+    "description": "$работа с литературой&",<br />
+    "color": "#43B658",<br />
+    "backgroundColor": "#EBFDF2"</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Событие создано</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Проверить создание событий 1 и 2</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Метод = POST<br />
+URL = <a href="https://api-teachers.skyeng.ru/v2/schedule/events" target="_blank">https://api-teachers.skyeng.ru/v2/schedule/events</a><br />
+Тело запроса:<br />
+"from": "2023-07-01T00:00:00+03:00",<br />
+"till": "2023-07-30T00:00:00+03:00",<br />
+"onlyTypes": ["slot", "event"],<br />
+"statuses": ["without_status"]</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код 200<br />
+Созданные события отображается в списке событий</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+            </body>
+</html>
