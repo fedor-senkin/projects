@@ -31,6 +31,7 @@
 <li> Тестирование требований: несоответствующие критериям хороших требований формулировки и вопросы, возникшие по ним, объединены в <a href="skyeng/requirment testing.pdf">таблицу</a>.</li>
 <li><a href="skyeng/декомпозиция.jpg">Декомпозиция</a> выполнена в Miro.</li>
 <li><a href="skyeng/skyeng_smoke TC.pdf">Smoke</a>, <a href="skyeng/acceptance TC.pdf">приемочные</a> и функциональные <a href="skyeng/skyeng_API TC.pdf">API</a>-тесты оформлены в виде тест-кейсов.
+<li>API тест-кейсы выполнены в Postman (пример: <a href="skyeng/Postman.jpg">запросы на создание, просмотр и удаление нового события в расписании</a>).
 <li><a href="skyeng/functional tests.pdf">Функциональные (GUI)</a> и <a href="skyeng/regress test.pdf">регрессионные тесты</a> оформлены в виде чек-листов.</li>
 <li>По выявленным в ходе тестирования дефектам составлены отчеты о дефектах (<a href="skyeng/bugreport1.pdf">пример 1</a>, <a href="skyeng/bugreport2.pdf">пример 2</a>).</li>
 <p>
