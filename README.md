@@ -8,7 +8,7 @@
 
 ## Навыки и технологии
 ``Jira``, ``qase.io``, ``SQL``, `` Postman``, ``Swagger``, ``Trello``, <br>
-``SoapUI``, ``Mockoon``, ``Chrome DevTools``.
+``SoapUI``, ``Mockoon``, ``Chrome DevTools``, ``Miro``
 
 
 
