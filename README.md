@@ -15,7 +15,7 @@
 
 ## Проекты
 <p> </p>
-<a href="project skyeng test plan.pdf">Проект № 1. Тестирование веб-приложения для учителей от Skyeng</a>
+<a href="skyeng/project skyeng test plan.pdf">Проект № 1. Тестирование веб-приложения для учителей от Skyeng</a>
 <p> </p>
 <p>Что нужно было сделать: протестировать новую функциональность - добавление личных событий.<p>
   <li>Задача № 1. Тестирование требований.</li>
@@ -28,11 +28,11 @@
 
 
 <p>Как решал: 
-<li> Тестирование требований: несоответствующие критериям хороших требований формулировки и вопросы, возникшие по ним, объединены в <a href="requirment testing.pdf">таблицу</a>.</li>
-<li><a href="декомпозиция.jpg">Декомпозиция</a> выполнена в Miro.</li>
-<li><a href="skyeng_smoke TC.pdf">Smoke</a>, <a href="acceptance TC.pdf">приемочные</a> и функциональные <a href="skyeng_API TC.pdf">API</a>-тесты оформлены в виде тест-кейсов.
-<li><a href="functional tests.pdf">Функциональные (GUI)</a> и <a href="regress test.pdf">регрессионные тесты</a> оформлены в виде чек-листов.</li>
-<li>По выявленным в ходе тестирования дефектам составлены отчеты о дефектах (<a href="bugreport1.pdf">пример 1</a>, <a href="bugreport2.pdf">пример 2</a>).</li>
+<li> Тестирование требований: несоответствующие критериям хороших требований формулировки и вопросы, возникшие по ним, объединены в <a href="skyeng/requirment testing.pdf">таблицу</a>.</li>
+<li><a href="skyeng/декомпозиция.jpg">Декомпозиция</a> выполнена в Miro.</li>
+<li><a href="skyeng/skyeng_smoke TC.pdf">Smoke</a>, <a href="skyeng/acceptance TC.pdf">приемочные</a> и функциональные <a href="skyeng/skyeng_API TC.pdf">API</a>-тесты оформлены в виде тест-кейсов.
+<li><a href="skyeng/functional tests.pdf">Функциональные (GUI)</a> и <a href="skyeng/regress test.pdf">регрессионные тесты</a> оформлены в виде чек-листов.</li>
+<li>По выявленным в ходе тестирования дефектам составлены отчеты о дефектах (<a href="skyeng/bugreport1.pdf">пример 1</a>, <a href="skyeng/bugreport2.pdf">пример 2</a>).</li>
 <p>
  <p>Выводы (итоги):<p>
 <ol>
