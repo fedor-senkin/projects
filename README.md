@@ -42,4 +42,4 @@
 <br> 
 
 ## Контактная информация
-- Email: f.senkin@gmail.com
+- Email: f_senkin@mail.ru
