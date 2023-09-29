@@ -8,7 +8,8 @@
 
 ## Навыки и технологии
 ``Jira``, ``qase.io``, ``SQL``, `` Postman``, ``Swagger``, ``Trello``, <br>
-``SoapUI``, ``Mockoon``, ``Chrome DevTools``, ``Miro``
+``SoapUI``, ``Mockoon``, ``Chrome DevTools``, ``Miro``,  ``Android Studio``,   <br>
+``Charles Proxy``
 ## Проекты
 <p> </p>
 
