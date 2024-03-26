@@ -2,18 +2,18 @@
 
 ## Обо мне 
 
-Привет! Меня зовут Федор, я - начинающий тестировщик. <br>
-В этом репозитории вы можете найти некоторые из моих проектов, выполненных во время стажировок, обучения и практики.
+My name is Fedor, I am a beginner tester. | Привет! Меня зовут Федор, я - начинающий тестировщик. <br>
+In this repository you can find some of my projects completed during internships, training and practice. | В этом репозитории вы можете найти некоторые из моих проектов, выполненных во время стажировок, обучения и практики.
 <br>
 
-## Навыки и технологии
+## Skills and technologies | Навыки и технологии
 ``Jira``, ``qase.io``, ``SQL``, `` Postman``, ``Swagger``, ``Trello``, <br>
 ``SoapUI``, ``Mockoon``, ``Chrome DevTools``, ``Miro``,  ``Android Studio``,   <br>
 ``Charles Proxy``
-## Проекты
+## Projects | Проекты
 <p> </p>
 
-### Тестирование веб-приложения для учителей от Skyeng
+### Testing a web application for teachers from Skyeng | Тестирование веб-приложения для учителей от Skyeng
 <p> </p>
 <p>Что нужно было сделать: протестировать новую функциональность - добавление личных событий.<p>
   <li>Задача № 1. Тестирование требований.</li>
