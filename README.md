@@ -1,4 +1,4 @@
-# Портфолио: инженер по тестированию | Portfolio: QA (Test) Engineer <a href="README_ENGLISH.md">English version</a>
+# Портфолио: инженер по тестированию | <a href="README_ENGLISH.md">English version</a>
 ## Обо мне 
 
 My name is Fedor, I am a beginner tester. | Привет! Меня зовут Федор, я - начинающий тестировщик. <br>
