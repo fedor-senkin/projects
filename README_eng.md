@@ -6,8 +6,8 @@ My name is Fedor, I am a beginner tester.<br>
 In this repository you can find some of my projects completed during internships, training and practice.<br>
 
 ## Skills and technologies
-``Jira``, ``qase.io``, ``SQL``, `` Postman``, ``Swagger``, ``Trello``, <br>
-``SoapUI``, ``Mockoon``, ``Chrome DevTools``, ``Miro``,  ``Android Studio``,   <br>
+``Jira``, ``qase.io``, ``SQL``, `` Postman``, ``Trello``, <br>
+``Chrome DevTools``, ``Miro``,  ``Android SDK``,   <br>
 ``Charles Proxy``
 ## Projects
 <p> </p>
