@@ -6,8 +6,8 @@ In this repository you can find some of my projects completed during internships
 <br>
 
 ## Skills and technologies | Навыки и технологии
-``Jira``, ``qase.io``, ``SQL``, `` Postman``, ``Swagger``, ``Trello``, <br>
-``SoapUI``, ``Mockoon``, ``Chrome DevTools``, ``Miro``,  ``Android Studio``,   <br>
+``Jira``, ``qase.io``, ``SQL``, `` Postman``, ``Trello``,<br>
+``Chrome DevTools``, ``Miro``,  ``Android SDK,<br>
 ``Charles Proxy``
 ## Projects | Проекты
 <p> </p>
